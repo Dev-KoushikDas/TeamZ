@@ -1,6 +1,5 @@
 //joy 123
 //joy2 1234
-
 import mongoose from "mongoose";
 const UserSchema = new mongoose.Schema(
   {

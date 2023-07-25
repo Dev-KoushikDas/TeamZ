@@ -3,6 +3,7 @@ import {
   faCalendarDays,
   faHome,
   faHospital,
+  faLocation,
   faPerson
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -53,7 +54,7 @@ const Header = ({ type }) => {
    // dispatch({ type: "NEW_SEARCH", payload: { name,destination, dates, options } });
    dispatch({ type: "NEW_SEARCH", payload: { name,destination} });
    // navigate("/hotels", { state: { name,destination, dates, options } });
-   navigate("/hotels", { state: { name,destination} });
+   navigate("/events", { state: { name,destination} });
   };
 
   
@@ -73,38 +74,37 @@ const Header = ({ type }) => {
           </Link>
           <Link to='/list'>
           <div className="headerListItem">
-            <FontAwesomeIcon icon={faHospital} />
-            <button>Clinics</button>
+            <FontAwesomeIcon icon={faCalendarDays} />
+            <button>Events</button>
           </div>
           </Link>
         </div>
         {type !== "list" && (
           <>
             <h1 className="headerTitle">
-             Meet the doctors , cure your problems
+             make the TEAM of your Dream!!!
             </h1>
             <p className="headerDesc">
-             Cause We don't cure diseases , we cure lives!!
+            Join your favourite team to participate in Hackathons,Quizes and Coding contests
             </p>
-            <p>Get 10% off your first booking......</p>
             {!user && <button className="headerBtn">Sign in / Register</button>}
             
             <div className="headerSearch">
               
               <div className="headerSearchItem">
-                <FontAwesomeIcon icon={faBed} className="headerIcon" />
+                <FontAwesomeIcon icon={faCalendarDays} className="headerIcon" />
                 <input
                   type="text"
-                  placeholder="doctor ? eg:orthopedic"
+                  placeholder="EVENT eg:hackathon"
                   className="headerSearchInput"
                   onChange={(e) => setName(e.target.value)}
                 />
               </div>
               <div className="headerSearchItem">
-                <FontAwesomeIcon icon={faBed} className="headerIcon" />
+                <FontAwesomeIcon icon={faLocation} className="headerIcon" />
                 <input
                   type="text"
-                  placeholder="location? eg:kolkata"
+                  placeholder="LOCATION eg:kolkata"
                   className="headerSearchInput"
                   onChange={(e) => setDestination(e.target.value)}
                 />

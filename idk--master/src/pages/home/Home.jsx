@@ -4,9 +4,16 @@ import Header from "../../components/header/Header";
 import MailList from "../../components/mailList/MailList";
 import Navbar from "../../components/navbar/Navbar";
 import PropertyList from "../../components/propertyList/PropertyList";
+import useFetch from "../../hooks/useFetch";
 import "./home.css";
 
+
 const Home = () => {
+
+  const { data_feature, loading_feature} = useFetch(
+    `/events`
+  );
+  
   return (
     <div className="container_home">
       <Navbar />
@@ -14,8 +21,8 @@ const Home = () => {
       <div className="homeContainer">
       <h1 className="homeTitle">Clinics near you...</h1>
         <Featured/>
-        <h1 className="homeTitle">Featured clinics</h1>
-        <FeaturedProperties/>
+        {/* <h1 className="homeTitle">Featured clinics</h1> */}
+        {/* <FeaturedProperties/> */}
         <MailList/>
       </div>
     </div>

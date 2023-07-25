@@ -6,6 +6,10 @@
   position: relative;
 }
 
+.headerTitle{
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+font-size: 50px;
+}
 .headerContainer {
   width: 100%;
   max-width: 1024px;
@@ -45,6 +49,7 @@
 }
 .headerDesc {
   margin: 20px 0px;
+  font-size: 20px;
 }
 
 .headerBtn {

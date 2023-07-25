@@ -1,59 +1,63 @@
-import Hotel from "../models/Hotel.js";
-import Room from "../models/Room.js";
+import Event from "../models/Event.js";
+//import Room from "../models/Room.js";
 
-export const createHotel = async (req, res, next) => {
-  const newHotel = new Hotel(req.body);
+export const createEvent = async (req, res, next) => {
+  const newEvent = new Event(req.body);
 
   try {
-    const savedHotel = await newHotel.save();
-    res.status(200).json(savedHotel);
+    const savedEvent = await newEvent.save();
+    res.status(200).json(savedEvent);
   } catch (err) {
     next(err);
   }
 };
-export const updateHotel = async (req, res, next) => {
+
+
+export const updateEvent = async (req, res, next) => {
   try {
-    const updatedHotel = await Hotel.findByIdAndUpdate(
+    const updatedEvent = await Event.findByIdAndUpdate(
       req.params.id,
       { $set: req.body },
       { new: true }
     );
-    res.status(200).json(updatedHotel);
+    res.status(200).json(updatedEvent);
   } catch (err) {
     next(err);
   }
 };
 
-export const deleteHotel = async (req, res, next) => {
+export const deleteEvent = async (req, res, next) => {
   try {
-    await Hotel.findByIdAndDelete(req.params.id);
-    res.status(200).json("Hotel has been deleted.");
+    await Event.findByIdAndDelete(req.params.id);
+    res.status(200).json("Event has been deleted.");
   } catch (err) {
     next(err);
   }
 };
 
-export const getHotel = async (req, res, next) => {
+export const getEvent = async (req, res, next) => {
   try {
-    const hotel = await Hotel.findById(req.params.id);
-    res.status(200).json(hotel);
+    const event = await Event.findById(req.params.id);
+    res.status(200).json(event);
   } catch (err) {
     next(err);
   }
 };
 
-export const getHotels = async (req, res, next) => {
+export const getEvents = async (req, res, next) => {
   const { min, max, ...others } = req.query;
   try {
-    const hotels = await Hotel.find({
+    const events = await Event.find({
       ...others,
       cheapestPrice: { $gt: min | 1, $lt: max || 999 },
     }).limit(req.query.limit);
-    res.status(200).json(hotels);
+    res.status(200).json(events);
   } catch (err) {
     next(err);
   }
 };
+
+
 
 export const countByCity = async (req, res, next) => {
   const cities = req.query.cities.split(",");

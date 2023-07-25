@@ -8,7 +8,7 @@ const Location1 = () => {
 
 
   const { data, loading} = useFetch(
-    `/hotels?city=kolkata`
+    `/events?type=hackathon`
   );
 
  

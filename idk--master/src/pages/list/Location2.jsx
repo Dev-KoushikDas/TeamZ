@@ -8,7 +8,7 @@ const Location2 = () => {
 
 
   const { data, loading} = useFetch(
-    `/hotels?city=barasat`
+    `/events?type=coding`
   );
 
  

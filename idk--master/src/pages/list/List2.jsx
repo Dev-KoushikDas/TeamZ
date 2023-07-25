@@ -6,11 +6,9 @@ import useFetch from "../../hooks/useFetch";
 
 const List2 = () => {
 
-
   const { data, loading} = useFetch(
-    `/hotels?rating=5`
+    `/events`
   );
-
 
   return (
     <div>

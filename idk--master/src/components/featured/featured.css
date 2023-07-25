@@ -11,6 +11,7 @@
   position: relative;
   color: white;
   border-radius: 10px;
+  border:4px solid rgba(241, 190, 3, 0.639);
   overflow: hidden;
   height: 250px;
   flex:1
@@ -23,9 +24,7 @@
 }
 
 .featuredTitles{
-  background-color: black;
-  opacity: 60%;
-  background-blend-mode:multiply;
+  font-style: italic;
   position: absolute;
   bottom: 20px;
   left: 20px;

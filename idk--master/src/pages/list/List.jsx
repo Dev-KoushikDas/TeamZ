@@ -20,8 +20,10 @@ const List = () => {
 
   const { data, loading, error, reFetch } = useFetch(
    //`/hotels?disease=${name}&city=${destination}&min=${min || 0 }&max=${max || 999}`
-   `/hotels?disease=${name}&city=${destination}`
+   `/events?type=${name}&city=${destination}`
   );
+
+ 
 
   const handleClick = () => {
     reFetch();
@@ -36,7 +38,7 @@ const List = () => {
           <div className="listSearch">
             <h1 className="lsTitle">Search</h1>
             <div className="lsItem">
-              <label>Disease</label>
+              <label>Events</label>
               <input placeholder={name} type="text"
                onChange={(e) => setName(e.target.value)} />
             </div>

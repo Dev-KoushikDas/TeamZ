@@ -1,10 +1,10 @@
 import mongoose from "mongoose";
-const HotelSchema = new mongoose.Schema({
+const EventSchema = new mongoose.Schema({
   name: {
     type: String,
     required: true,
   },
-  type: {
+  type:{
     type: String,
     required: true,
   },
@@ -13,10 +13,6 @@ const HotelSchema = new mongoose.Schema({
     required: true,
   },
   address: {
-    type: String,
-    required: true,
-  },
-  distance: {
     type: String,
     required: true,
   },
@@ -31,26 +27,19 @@ const HotelSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  /*
   rating: {
     type: Number,
     min: 0,
     max: 5,
-  },
+  },*/
+  /*
   rooms: {
     type: [String],
-  },
-  
-  cheapestPrice: {
-    type: Number,
-    required: true,
-  },
+  },*/
   featured: {
     type: Boolean,
     default: false,
-  },
-  disease:{
-    type:String,
-    required:true,
   },
   app:[{name:String,email:String,address:String,github:String,number:String}]
   
@@ -58,4 +47,4 @@ const HotelSchema = new mongoose.Schema({
 { timestamps: true }
 );
 
-export default mongoose.model("Hotel", HotelSchema)
+export default mongoose.model("Event", EventSchema)
