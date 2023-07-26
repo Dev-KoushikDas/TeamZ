@@ -41,5 +41,5 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://localhost:8000/api"
+  "proxy": "https://team-z-l6id.vercel.app/api"
 }
