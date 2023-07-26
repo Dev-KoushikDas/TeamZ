@@ -24,7 +24,7 @@ const { data, loading, error } = useFetch(
       ) : (
         <>
           
-          <Link to="/locationkolkata" className="featuredItem">
+          <Link to="/hackathon" className="featuredItem">
             <img
               src={img1}
               className="featuredImg"
@@ -37,7 +37,7 @@ const { data, loading, error } = useFetch(
             </div>
           </Link>
           
-          <Link to="/locationbarasat" className="featuredItem">
+          <Link to="/coding" className="featuredItem">
             <img
               src={img2}
               alt=""
@@ -48,7 +48,7 @@ const { data, loading, error } = useFetch(
               <h2>{data[1]} ongoing...</h2>
             </div>
           </Link>
-          <Link to="/locationsaltlake" className="featuredItem">
+          <Link to="/quiz" className="featuredItem">
             <img
               src={img3}
               alt=""
