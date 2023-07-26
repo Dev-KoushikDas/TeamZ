@@ -20,9 +20,9 @@ function App() {
         <Route path="/" element={<Home/>}/>
         <Route path="/events" element={<List/>}/>
         <Route path="/list" element={<List2/>}/>
-        <Route path="/locationkolkata" element={<Location1/>}/>
-        <Route path="/locationbarasat" element={<Location2/>}/>
-        <Route path="/locationsaltlake" element={<Location3/>}/>
+        <Route path="/hackathon" element={<Location1/>}/>
+        <Route path="/coding" element={<Location2/>}/>
+        <Route path="/quiz" element={<Location3/>}/>
         <Route path="/events/:id" element={<Events/>}/>
         <Route path="/login" element={<Login/>}/>
       </Routes>
