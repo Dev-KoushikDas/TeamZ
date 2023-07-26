@@ -1,19 +1,12 @@
 import Featured from "../../components/featured/Featured";
-import FeaturedProperties from "../../components/featuredProperties/FeaturedProperties";
 import Header from "../../components/header/Header";
 import MailList from "../../components/mailList/MailList";
 import Navbar from "../../components/navbar/Navbar";
-import PropertyList from "../../components/propertyList/PropertyList";
-import useFetch from "../../hooks/useFetch";
 import "./home.css";
 
 
 const Home = () => {
 
-  const { data_feature, loading_feature} = useFetch(
-    `/events`
-  );
-  
   return (
     <div className="container_home">
       <Navbar />
