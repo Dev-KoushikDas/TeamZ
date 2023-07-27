@@ -1,7 +1,5 @@
-import { useState } from "react";
-import { useContext } from "react";
-import { Link, useNavigate } from "react-router-dom";
-import { SearchContext } from "../../context/SearchContext";
+
+import { Link} from "react-router-dom";
 import useFetch from "../../hooks/useFetch";
 import img1 from "./img1.jpg"
 import img2 from "./img2.jpg"

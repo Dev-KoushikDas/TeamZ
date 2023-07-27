@@ -7,9 +7,7 @@ import useFetch from "../../hooks/useFetch";
 const Location1 = () => {
 
 
-  const { data, loading} = useFetch(
-    `/events?type=hackathon`
-  );
+  const {data, loading} = useFetch(`https://teamz.onrender.com/api/events?type=hackathon`);
 
  
   return (

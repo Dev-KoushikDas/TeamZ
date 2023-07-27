@@ -8,7 +8,7 @@ const Location2 = () => {
 
 
   const { data, loading} = useFetch(
-    `/events?type=coding`
+    `https://teamz.onrender.com/api/events?type=coding`
   );
 
  

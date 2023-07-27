@@ -7,7 +7,7 @@ import useFetch from "../../hooks/useFetch";
 const List2 = () => {
 
   const { data, loading} = useFetch(
-    `/events`
+    `https://teamz.onrender.com/api/events`
   );
 
   return (

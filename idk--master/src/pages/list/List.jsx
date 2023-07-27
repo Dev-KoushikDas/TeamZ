@@ -14,13 +14,13 @@ const List = () => {
   const [destination, setDestination] = useState(location.state.destination);
  // const [dates, setDates] = useState(location.state.dates);
  // const [openDate, setOpenDate] = useState(false);
-  const [options, setOptions] = useState(location.state.options);
+//  const [options, setOptions] = useState(location.state.options);
  // const [min, setMin] = useState(undefined);
   //const [max, setMax] = useState(undefined);
 
   const { data, loading, error, reFetch } = useFetch(
    //`/hotels?disease=${name}&city=${destination}&min=${min || 0 }&max=${max || 999}`
-   `/events?type=${name}&city=${destination}`
+   `https://teamz.onrender.com/api/events?type=${name}&city=${destination}`
   );
 
  

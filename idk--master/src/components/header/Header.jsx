@@ -1,18 +1,15 @@
 import {
-  faBed,
   faCalendarDays,
   faHome,
-  faHospital,
-  faLocation,
-  faPerson
+  faLocation
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./header.css";
-import { DateRange } from "react-date-range";
+//import { DateRange } from "react-date-range";
 import { useContext, useState } from "react";
 import "react-date-range/dist/styles.css"; 
 import "react-date-range/dist/theme/default.css"; 
-import { format } from "date-fns";
+//import { format } from "date-fns";
 import { Link, useNavigate } from "react-router-dom";
 import { SearchContext } from "../../context/SearchContext";
 import { AuthContext } from "../../context/AuthContext";
