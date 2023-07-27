@@ -10,7 +10,7 @@ import "./featured.css";
 const Featured = () => {
   
 const { data, loading, error } = useFetch(
-"/hotels/countByCity?cities=kolkata,barasat,saltlake"
+"https://teamz.onrender.com/api/hotels/countByCity?cities=kolkata,barasat,saltlake"
 );
 
 

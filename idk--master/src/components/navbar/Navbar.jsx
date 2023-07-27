@@ -5,12 +5,10 @@ import { AuthContext } from "../../context/AuthContext";
 import axios from "axios";
 const Navbar = () => {
   const { user } = useContext(AuthContext);
-  
-
   const handleLogout = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("/logout");
+      await axios.post("https://teamz.onrender.com/api/logout");
     } catch (err) {
       
     }
