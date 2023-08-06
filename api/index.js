@@ -5,7 +5,7 @@ import mongoose from "mongoose";
 import authRoute from "./routes/auth.js";
 import eventsRoute from "./routes/hotels.js";
 import usersRoute from "./routes/users.js";
-//import roomsRoute from "./routes/rooms.js";
+import roomsRoute from "./routes/rooms.js";
 import cookieParser from "cookie-parser";
 //import { faUserInjured } from "@fortawesome/free-solid-svg-icons";
 
@@ -72,7 +72,7 @@ app.use(express.json());
 app.use("/api/auth", authRoute);
 app.use("/api/users", usersRoute);
 app.use("/api/events", eventsRoute);
-//app.use("/api/rooms", roomsRoute);
+app.use("/api/rooms", roomsRoute);
 
 
 
