@@ -1,22 +1,14 @@
 import express from "express";
-import {
-  createRoom,
-  deleteRoom,
-  getRoom,
-  getRooms,
-  updateRoom,
-  updateRoomAvailability,
-  updateRoomAvailability2,
-} from "../controllers/applicant.js";
+import { deleteRoom, getRoom, getRooms, updateRoom, updateRoomAvailability2 } from "../controllers/applicant.js";
 import { verifyAdmin } from "../utils/verifyToken.js";
 
 const router = express.Router();
 
 //CREATE
-router.post("/:hotelid", verifyAdmin, createRoom);
+//router.post("/:hotelid", verifyAdmin, createRoom);
 
 //UPDATE
-router.put("/availability/:id", updateRoomAvailability);
+//router.put("/availability/:id", updateRoomAvailabilit);
 
 router.post("/app/:eventid",verifyAdmin,updateRoomAvailability2);
 
