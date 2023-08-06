@@ -25,7 +25,7 @@ const Events = () => {
   const [slideNumber, setSlideNumber] = useState(0);
   const [open, setOpen] = useState(false);
   const [openModal, setOpenModal] = useState(false);
-  const { data, loading, error } = useFetch(`/events/find/${id}`);
+  const { data, loading, error } = useFetch(`https://teamz.onrender.com/api/events/find/${id}`);
   const { user } = useContext(AuthContext);
   const navigate = useNavigate();
 

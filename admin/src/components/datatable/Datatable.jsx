@@ -1,6 +1,5 @@
-import "./datatable.scss";
+import "./datatable.css";
 import { DataGrid } from "@mui/x-data-grid";
-import { userColumns, userRows } from "../../datatablesource";
 import { Link, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 import useFetch from "../../hooks/useFetch";
@@ -9,9 +8,8 @@ import axios from "axios";
 const Datatable = ({columns}) => {
   const location = useLocation();
   const path = location.pathname.split("/")[1];
-  //suddenly i passed 0 and it started working
   const [list, setList] = useState(0);
-  const { data, loading, error } = useFetch(`/${path}`);
+  const { data, loading, error } = useFetch(`https://teamz.onrender.com/api/${path}`);
 
   useEffect(() => {
     setList(data);
@@ -19,7 +17,7 @@ const Datatable = ({columns}) => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`/${path}/${id}`);
+      await axios.delete(`https://teamz.onrender.com/api/${path}/${id}`);
       setList(list.filter((item) => item._id !== id));
     } catch (err) {}
   };
@@ -37,8 +35,7 @@ const Datatable = ({columns}) => {
             </Link>
             <div
               className="deleteButton"
-              onClick={() => handleDelete(params.row._id)}
-            >
+              onClick={() => handleDelete(params.row._id)}>
               Delete
             </div>
           </div>

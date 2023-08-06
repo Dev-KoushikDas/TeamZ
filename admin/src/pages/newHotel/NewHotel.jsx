@@ -1,4 +1,4 @@
-import "./newHotel.scss";
+import "./newHotel.css";
 import Sidebar from "../../components/sidebar/Sidebar";
 import Navbar from "../../components/navbar/Navbar";
 import DriveFolderUploadOutlinedIcon from "@mui/icons-material/DriveFolderUploadOutlined";
@@ -12,7 +12,7 @@ const NewHotel = () => {
   const [info, setInfo] = useState({});
   const [rooms, setRooms] = useState([]);
 
-  const { data, loading, error } = useFetch("/rooms");
+  const { data, loading, error } = useFetch("https://teamz.onrender.com/api/rooms");
 
   const handleChange = (e) => {
     setInfo((prev) => ({ ...prev, [e.target.id]: e.target.value }));
@@ -52,7 +52,7 @@ const NewHotel = () => {
         photos: list,
       };
 
-      await axios.post("/hotels", newhotel);
+      await axios.post("https://teamz.onrender.com/api/hotels", newhotel);
     } catch (err) {console.log(err)}
   };
   return (

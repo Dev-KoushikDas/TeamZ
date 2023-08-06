@@ -10,7 +10,7 @@ const New = ({ inputs, title }) => {
   const [info, setInfo] = useState({});
 
   const handleChange = (e) => {
-    setInfo((prev) => ({ ...prev, [e.target.id]: e.target.value }));
+  setInfo((prev) => ({ ...prev, [e.target.id]: e.target.value }));
   };
 
   const handleClick = async (e) => {
@@ -31,7 +31,7 @@ const New = ({ inputs, title }) => {
         img: url,
       };
 
-      await axios.post("/auth/register", newUser);
+    await axios.post("https://teamz.onrender.com/api/auth/register", newUser);
     } catch (err) {
       console.log(err);
     }
