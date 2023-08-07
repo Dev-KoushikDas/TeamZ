@@ -1,7 +1,7 @@
 import Home from "./pages/home/Home";
 import Login from "./pages/login/Login";
 import List from "./pages/list/List";
-import Single from "./pages/single/Single";
+import Singles from "./pages/single/Singles";
 import New from "./pages/new/New";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { userInputs } from "./formSource";
@@ -54,7 +54,7 @@ function App() {
                 path=":userId"
                 element={
                   <ProtectedRoute>
-                    <Single />
+                    <Singles />
                   </ProtectedRoute>
                 }
               />
@@ -80,7 +80,7 @@ function App() {
                 path=":productId"
                 element={
                   <ProtectedRoute>
-                    <Single />
+                    <Singles />
                   </ProtectedRoute>
                 }
               />
@@ -106,7 +106,7 @@ function App() {
                 path=":productId"
                 element={
                   <ProtectedRoute>
-                    <Single />
+                    <Singles />
                   </ProtectedRoute>
                 }
               />

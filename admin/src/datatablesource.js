@@ -36,6 +36,31 @@ export const userColumns = [
   },
 ];
 
+export const appColumns = [
+  { field: "_id", headerName: "ID", width: 210 },
+  {
+    field: "email",
+    headerName: "Email",
+    width: 230,
+  },
+
+  {
+    field: "country",
+    headerName: "Country",
+    width: 70,
+  },
+  {
+    field: "city",
+    headerName: "City",
+    width: 70,
+  },
+  {
+    field: "phone",
+    headerName: "Phone",
+    width: 70,
+  },
+];
+
 export const hotelColumns = [
   { field: "_id", headerName: "ID", width: 250 },
   {

@@ -19,10 +19,6 @@ const ApplicantSchema = new mongoose.Schema({
   number: {
   type: String,
   required: true,
-  },
-  event:{
-  type:String,
-  required:true
   }
 },
 {timestamps: true}
