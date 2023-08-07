@@ -1,7 +1,7 @@
 export const userColumns = [
-  { field: "_id", headerName: "ID", width: 70 },
+  { field: "_id", headerName: "ID", width: 210 },
   {
-    field: "user",
+    field: "username",
     headerName: "User",
     width: 230,
     renderCell: (params) => {
@@ -22,17 +22,17 @@ export const userColumns = [
   {
     field: "country",
     headerName: "Country",
-    width: 100,
+    width: 70,
   },
   {
     field: "city",
     headerName: "City",
-    width: 100,
+    width: 70,
   },
   {
     field: "phone",
     headerName: "Phone",
-    width: 100,
+    width: 70,
   },
 ];
 
@@ -61,25 +61,31 @@ export const hotelColumns = [
 ];
 
 export const roomColumns = [
-  { field: "_id", headerName: "ID", width: 70 },
+  { field: "_id", headerName: "ID", width: 220 },
   {
-    field: "title",
-    headerName: "Title",
-    width: 230,
-  },
-  {
-    field: "desc",
-    headerName: "Description",
+    field: "name",
+    headerName: "Name",
     width: 200,
   },
   {
-    field: "price",
-    headerName: "Price",
-    width: 100,
+    field: "email",
+    headerName: "E-mail",
+    width: 150,
   },
   {
-    field: "maxPeople",
-    headerName: "Max People",
+    field: "number",
+    headerName: "Number",
+    width: 100,
+  },
+   {
+    field: "address",
+    headerName: "Address",
+    width: 100,
+  },
+
+  {
+    field: "github",
+    headerName: "Github",
     width: 100,
   },
 ];

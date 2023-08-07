@@ -5,16 +5,16 @@ const DarkModeReducer = (state, action) => {
         darkMode: false,
       };
     }
-    case "DARK": {
-      return {
-        darkMode: true,
-      };
-    }
-    case "TOGGLE": {
-      return {
-        darkMode: !state.darkMode,
-      };
-    }
+    // case "DARK": {
+    //   return {
+    //     darkMode: true,
+    //   };
+    // }
+    // case "TOGGLE": {
+    //   return {
+    //     darkMode: !state.darkMode,
+    //   };
+    // }
     default:
       return state;
   }
