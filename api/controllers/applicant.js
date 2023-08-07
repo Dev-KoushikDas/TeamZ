@@ -1,5 +1,5 @@
 import Room from "../models/Room.js";
-import Hotel from "../models/Event.js";
+import Event from "../models/Event.js";
 import { createError } from "../utils/error.js";
 import Applicant from "../models/Applicants.js";
 /*
@@ -25,9 +25,11 @@ export const createRoom = async (req, res, next) => {
 export const updateRoomAvailability2 = async (req, res, next) => {
   const newApp = new Applicant(req.body);
   const eventId = req.params.eventId;
+
   try {
     const savedApp = await newApp.save();
-    await Hotel.findByIdAndUpdate(eventId,
+    
+    await Event.findByIdAndUpdate(eventId,
       {
         $push: {
         app:savedApp
@@ -60,7 +62,7 @@ export const deleteRoom = async (req, res, next) => {
   try {
     await Room.findByIdAndDelete(req.params.id);
     try {
-      await Hotel.findByIdAndUpdate(hotelId, {
+      await Event.findByIdAndUpdate(hotelId, {
         $pull: { rooms: req.params.id },
       });
     } catch (err) {
