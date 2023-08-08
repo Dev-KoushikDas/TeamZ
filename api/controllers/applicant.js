@@ -23,20 +23,19 @@ export const createRoom = async (req, res, next) => {
 */
 
 export const updateRoomAvailability2 = async (req, res, next) => {
-  const newApp = new Applicant(req.body);
   const eventId = req.params.eventId;
-
+  const newApp = new Applicant(req.body);
   try {
-    const savedApp = await newApp.save();
-    
-    await Event.findByIdAndUpdate(eventId,
-      {
-        $push: {
-        app:savedApp
-        },
+  const savedApp = await newApp.save();
+  try{
+    await Event.findByIdAndUpdate(eventId,{
+        $push: {app:savedApp},
+      });}
+      catch(err){
+      next(err);
       }
-    );
-  res.status(200).json("Room status has been updated.");
+  
+  res.status(200).json(savedApp);
   }catch(err){
   next(err);
   }
