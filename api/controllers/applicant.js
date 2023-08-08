@@ -1,7 +1,9 @@
+import Applicant from "../models/Applicants.js";
+import Event from "../models/Event.js";
 import Room from "../models/Room.js";
 
 import { createError } from "../utils/error.js";
-import Applicant from "../models/Applicants.js";
+
 /*
 export const createRoom = async (req, res, next) => {
   const hotelId = req.params.hotelid;
