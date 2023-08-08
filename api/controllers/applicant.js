@@ -61,7 +61,7 @@ export const updateRoom = async (req, res, next) => {
 export const deleteRoom = async (req, res, next) => {
   const hotelId = req.params.hotelid;
   try {
-    await Room.findByIdAndDelete(req.params.id);
+    await Applicant.findByIdAndDelete(req.params.id);
     try {
       await Event.findByIdAndUpdate(hotelId, {
         $pull: { rooms: req.params.id },
