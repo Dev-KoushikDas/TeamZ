@@ -141,7 +141,7 @@ const Events = () => {
         </div>
       )}
       {openModal && 
-      <Reserve setOpen={setOpenModal} hotelId={id}/>}
+      <Reserve setOpen={setOpenModal} eventId={id}/>}
 
       
     </div>

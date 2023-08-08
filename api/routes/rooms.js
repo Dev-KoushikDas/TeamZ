@@ -10,7 +10,7 @@ const router = express.Router();
 //UPDATE
 //router.put("/availability/:id", updateRoomAvailabilit);
 
-router.post("/app/:eventid",verifyAdmin,updateRoomAvailability2);
+router.post("/app/:eventid",updateRoomAvailability2);
 
 router.put("/:id", verifyAdmin, updateRoom);
 

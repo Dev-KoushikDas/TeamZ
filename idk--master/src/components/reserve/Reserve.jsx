@@ -7,7 +7,7 @@ import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
-const Reserve = ({ setOpen, hotelId }) => {
+const Reserve = ({ setOpen, eventId }) => {
 //const [selectedRooms, setSelectedRooms] = useState([]);
 // const { data, loading, error } = useFetch(`/hotels/room/${hotelId}`);
 // const { data, loading, error } = useFetch(`/hotels/room/${hotelId}`); 
@@ -74,7 +74,7 @@ const [credentials, setCredentials] = useState({
     e.preventDefault();
   
     try {
-      const res = await axios.post(`https://teamz.onrender.com/api/rooms/app/${hotelId}`, credentials);
+      const res = await axios.post(`https://teamz.onrender.com/api/rooms/app/${eventId}`, credentials);
       console.log(res)
       navigate("/")
     } catch (err) {
