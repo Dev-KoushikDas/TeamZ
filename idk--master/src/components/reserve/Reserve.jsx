@@ -24,7 +24,6 @@ const [credentials, setCredentials] = useState({
   address: undefined,
   github:undefined,
   number:undefined
-
 });
 /*
   const getDatesInRange = (startDate, endDate) => {
@@ -76,9 +75,10 @@ const [credentials, setCredentials] = useState({
   
     try {
       const res = await axios.post(`https://teamz.onrender.com/api/rooms/app/${hotelId}`, credentials);
+      console.log(res)
       navigate("/")
     } catch (err) {
-
+      console.log(err)
     }
   };
 

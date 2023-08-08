@@ -8,7 +8,7 @@ import { SearchContext } from "../../context/SearchContext";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
-const Reserve = ({ setOpen, hotelId }) => {
+const Apply = ({ setOpen, hotelId }) => {
   const [selectedRooms, setSelectedRooms] = useState([]);
   const { data, loading, error } = useFetch(`https://teamz.onrender.com/api/hotels/room/${hotelId}`);
   const { dates } = useContext(SearchContext);
@@ -108,4 +108,4 @@ const Reserve = ({ setOpen, hotelId }) => {
   );
 };
 
-export default Reserve;
+export default Apply;

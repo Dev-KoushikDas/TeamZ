@@ -103,8 +103,6 @@ const Events = () => {
             </span>
             <span className="hotelDistance">
               Excellent location – {data.distance}m from center
-               
-            
             </span>
             {/* <span className="hotelPriceHighlight">
               Book a stay over ${data.cheapestPrice} at this property and get a
