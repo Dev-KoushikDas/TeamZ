@@ -35,7 +35,7 @@ const Datatable = ({columns}) => {
             </Link>
             <div
               className="deleteButton"
-              onClick={() => handleDelete(params.row._id)}>
+              onClick={handleDelete(params.row._id)}>
               Delete
             </div>
           </div>
@@ -58,7 +58,7 @@ const Datatable = ({columns}) => {
         pageSize={9}
         rowsPerPageOptions={[9]}
         rowHeight={50}
-        checkboxSelection
+        //checkboxSelection
         getRowId={(row) => row._id}
         
       />

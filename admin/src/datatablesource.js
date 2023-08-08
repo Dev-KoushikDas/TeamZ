@@ -86,6 +86,11 @@ export const hotelColumns = [
 ];
 
 export const roomColumns = [
+  {
+    field: "eventname",
+    headerName: "Event Name",
+    width: 100,
+  },
   { field: "_id", headerName: "ID", width: 220 },
   {
     field: "name",
