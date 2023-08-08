@@ -7,7 +7,7 @@ import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
-const Reserve = ({ setOpen, eventId }) => {
+const Reserve = ({ setOpen, eventId,eventname }) => {
 //const [selectedRooms, setSelectedRooms] = useState([]);
 // const { data, loading, error } = useFetch(`/hotels/room/${hotelId}`);
 // const { data, loading, error } = useFetch(`/hotels/room/${hotelId}`); 
@@ -23,7 +23,8 @@ const [credentials, setCredentials] = useState({
   email: undefined,
   address: undefined,
   github:undefined,
-  number:undefined
+  number:undefined,
+  eventname:eventname
 });
 /*
   const getDatesInRange = (startDate, endDate) => {
@@ -66,6 +67,7 @@ const [credentials, setCredentials] = useState({
 
   const handleChange = (e) => {
     setCredentials((prev) => ({ ...prev, [e.target.id]: e.target.value }));
+    console.log(credentials)
   };
 
   const navigate = useNavigate();

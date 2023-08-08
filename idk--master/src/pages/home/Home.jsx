@@ -17,6 +17,7 @@ const Home = () => {
         {/* <h1 className="homeTitle">Featured clinics</h1> */}
         {/* <FeaturedProperties/> */}
         <MailList/>
+      
       </div>
     </div>
   );

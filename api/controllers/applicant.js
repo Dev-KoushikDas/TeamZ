@@ -1,5 +1,5 @@
 import Room from "../models/Room.js";
-import Event from "../models/Event.js";
+
 import { createError } from "../utils/error.js";
 import Applicant from "../models/Applicants.js";
 /*

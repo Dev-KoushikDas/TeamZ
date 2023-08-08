@@ -19,6 +19,10 @@ const ApplicantSchema = new mongoose.Schema({
   number: {
   type: String,
   required: true,
+  },
+  eventname: {
+  type:String,
+  required: true
   }
 },
 {timestamps: true}

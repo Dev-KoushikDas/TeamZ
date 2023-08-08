@@ -2,7 +2,6 @@ import "./events.css";
 import Navbar from "../../components/navbar/Navbar";
 import Header from "../../components/header/Header";
 import MailList from "../../components/mailList/MailList";
-import Footer from "../../components/footer/Footer";
 
 import {
   faCircleArrowLeft,
@@ -137,14 +136,11 @@ const Events = () => {
             </div>
           </div>
           <MailList />
-          <Footer />
         </div>
       )}
       {openModal && 
-      <Reserve setOpen={setOpenModal} eventId={id}/>}
-
-      
-    </div>
+      <Reserve setOpen={setOpenModal} eventId={id} eventname={data.name}/>}
+      </div>
   );
 };
 
