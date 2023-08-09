@@ -6,16 +6,16 @@ import {
   getEvents,
   updateEvent,
 } from "../controllers/event.js";
-import {verifyAdmin} from "../utils/verifyToken.js"
+//import {verifyAdmin} from "../utils/verifyToken.js"
 const router = express.Router();
 
 //CREATE
-router.post("/", verifyAdmin, createEvent);
+router.post("/",createEvent);
 
 //UPDATE
-router.put("/:id", verifyAdmin, updateEvent);
+router.put("/:id",updateEvent);
 //DELETE
-router.delete("/:id", verifyAdmin, deleteEvent);
+router.delete("/:id",deleteEvent);
 //GET
 
 router.get("/find/:id", getEvent);

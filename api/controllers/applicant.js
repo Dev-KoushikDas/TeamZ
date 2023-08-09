@@ -62,13 +62,16 @@ export const deleteRoom = async (req, res, next) => {
   const hotelId = req.params.hotelid;
   try {
     await Applicant.findByIdAndDelete(req.params.id);
+    /*
     try {
       await Event.findByIdAndUpdate(hotelId, {
         $pull: { rooms: req.params.id },
       });
+      
     } catch (err) {
       next(err);
     }
+    */
     res.status(200).json("Room has been deleted.");
   } catch (err) {
     next(err);
