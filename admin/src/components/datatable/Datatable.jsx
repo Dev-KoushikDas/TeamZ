@@ -19,7 +19,9 @@ const Datatable = ({columns}) => {
     try {
       await axios.delete(`https://teamz.onrender.com/api/${path}/${id}`);
       setList(list.filter((item) => item._id !== id));
-    } catch (err) {}
+    } catch (err) {
+      console.log(err)
+    }
   };
 
   const actionColumn = [
@@ -35,7 +37,7 @@ const Datatable = ({columns}) => {
             </Link>
             <div
               className="deleteButton"
-              onClick={handleDelete(params.row._id)}>
+              onClick={() =>handleDelete(params.row._id)}>
               Delete
             </div>
           </div>
