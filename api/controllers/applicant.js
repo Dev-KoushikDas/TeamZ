@@ -25,7 +25,7 @@ export const createRoom = async (req, res, next) => {
 */
 
 export const updateRoomAvailability2 = async (req, res, next) => {
-  const eventId = req.params.eventId;
+  const eventId = req.params.eventid;
   const newApp = new Applicant(req.body);
   try {
   const savedApp = await newApp.save();
@@ -59,8 +59,9 @@ export const updateRoom = async (req, res, next) => {
 
 
 export const deleteRoom = async (req, res, next) => {
-  const hotelId = req.params.hotelid;
+  const hotelId = req.params.id;
   try {
+    console.log(req.params.id)
     await Applicant.findByIdAndDelete(req.params.id);
     /*
     try {

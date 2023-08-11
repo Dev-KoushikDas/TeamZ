@@ -7,7 +7,7 @@ import eventsRoute from "./routes/hotels.js";
 import usersRoute from "./routes/users.js";
 import roomsRoute from "./routes/rooms.js";
 import cookieParser from "cookie-parser";
-//import { faUserInjured } from "@fortawesome/free-solid-svg-icons";
+
 
 import cors from "cors";
 /*

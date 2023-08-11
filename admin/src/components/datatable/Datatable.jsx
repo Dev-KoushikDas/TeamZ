@@ -9,7 +9,7 @@ const Datatable = ({columns}) => {
   const location = useLocation();
   const path = location.pathname.split("/")[1];
   const [list, setList] = useState(0);
-  const { data, loading, error } = useFetch(`https://teamz.onrender.com/api/${path}`);
+  const { data} = useFetch(`https://teamz.onrender.com/api/${path}`);
 
   useEffect(() => {
     setList(data);
@@ -18,6 +18,7 @@ const Datatable = ({columns}) => {
   const handleDelete = async (id) => {
   try {
   await axios.delete(`https://teamz.onrender.com/api/${path}/${id}`);
+  console.log(`${path}${id}`)
   setList(list.filter((item) => item._id !== id));
   }catch (err) {
   console.log(err)
