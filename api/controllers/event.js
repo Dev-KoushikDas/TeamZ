@@ -27,13 +27,14 @@ export const updateEvent = async (req, res, next) => {
 };
 
 export const deleteEvent = async (req, res, next) => {
-  try {
-    await Event.findByIdAndDelete(req.params.id);
-    res.status(200).json("Event has been deleted.");
-  } catch (err) {
-    next(err);
-  }
+try {
+await Event.findByIdAndDelete(req.params.id);
+res.status(200).json("Event has been deleted.");
+}catch (err) {
+next(err);
+}
 };
+
 
 export const getEvent = async (req, res, next) => {
   try {

@@ -1,12 +1,9 @@
 import "./sidebar.css";
-import DashboardIcon from "@mui/icons-material/Dashboard";
 import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
 import CreditCardIcon from "@mui/icons-material/CreditCard";
 import StoreIcon from "@mui/icons-material/Store";
 
 import { Link } from "react-router-dom";
-
-import { useContext } from "react";
 
 const Sidebar = () => {
   
@@ -40,10 +37,7 @@ const Sidebar = () => {
               <CreditCardIcon className="icon" />
               <span>APPLICANTS</span>
             </li>
-          </Link>
-        
-       
-         
+          </Link> 
         </ul>
       </div>
     </div>

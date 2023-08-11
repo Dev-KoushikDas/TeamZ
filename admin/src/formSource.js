@@ -3,19 +3,19 @@ export const userInputs = [
     id: "username",
     label: "Username",
     type: "text",
-    placeholder: "john_doe",
+    placeholder: "eg: john_doe",
   },
   {
     id: "email",
     label: "Email",
     type: "email",
-    placeholder: "john_doe@gmail.com",
+    placeholder: "eg: john_doe@gmail.com",
   },
   {
     id: "phone",
     label: "Phone",
     type: "text",
-    placeholder: "+1 234 567 89",
+    placeholder: "eg: +1 234 567 89",
   },
   {
     id: "password",
@@ -26,13 +26,13 @@ export const userInputs = [
     id: "country",
     label: "Country",
     type: "text",
-    placeholder: "USA",
+    placeholder: "eg: India",
   },
   {
     id: "city",
     label: "City",
     type: "text",
-    placeholder: "USA",
+    placeholder: "eg: Barasat",
   },
 ];
 
@@ -74,13 +74,13 @@ export const hotelInputs = [
     id: "name",
     label: "Name",
     type: "text",
-    placeholder: "My Hotel",
+    placeholder: "eg: My Event",
   },
   {
     id: "type",
     label: "Type",
     type: "text",
-    placeholder: "hotel",
+    placeholder: "",
   },
   {
     id: "city",
@@ -95,28 +95,16 @@ export const hotelInputs = [
     placeholder: "elton st, 216",
   },
   {
-    id: "distance",
-    label: "Distance from City Center",
-    type: "text",
-    placeholder: "500",
-  },
-  {
     id: "title",
     label: "Title",
     type: "text",
-    placeholder: "The best Hotel",
+    placeholder: "",
   },
   {
     id: "desc",
     label: "Description",
     type: "text",
     placeholder: "description",
-  },
-  {
-    id: "cheapestPrice",
-    label: "Price",
-    type: "text",
-    placeholder: "100",
   },
 ];
 

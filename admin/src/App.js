@@ -1,21 +1,17 @@
 import Home from "./pages/home/Home";
 import Login from "./pages/login/Login";
 import List from "./pages/list/List";
-import Singles from "./pages/single/Singles";
+
 import New from "./pages/new/New";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { userInputs } from "./formSource";
-import "./style/dark.css";
 import { useContext } from "react";
-//import { DarkModeContext } from "./context/darkModeContext";
 import { AuthContext } from "./context/AuthContext";
 import { hotelColumns, roomColumns, userColumns } from "./datatablesource";
-import NewHotel from "./pages/newHotel/NewHotel";
 import NewRoom from "./pages/newRoom/NewRoom";
+import NewEvent from "./pages/newEvent/NewEvent";
 
 function App() {
- // const { darkMode } = useContext(DarkModeContext);
-
   const ProtectedRoute = ({ children }) => {
     const { user } = useContext(AuthContext);
 
@@ -27,7 +23,6 @@ function App() {
   };
 
   return (
-  //  <div className={darkMode ? "app dark" : "app"}>
   <div className="app">
       <BrowserRouter>
         <Routes>
@@ -50,14 +45,7 @@ function App() {
                   </ProtectedRoute>
                 }
               />
-              <Route
-                path=":userId"
-                element={
-                  <ProtectedRoute>
-                    <Singles />
-                  </ProtectedRoute>
-                }
-              />
+         
               <Route
                 path="new"
                 element={
@@ -76,19 +64,12 @@ function App() {
                   </ProtectedRoute>
                 }
               />
-              <Route
-                path=":productId"
-                element={
-                  <ProtectedRoute>
-                    <Singles />
-                  </ProtectedRoute>
-                }
-              />
+
               <Route
                 path="new"
                 element={
                   <ProtectedRoute>
-                    <NewHotel  />
+                    <NewEvent/>
                   </ProtectedRoute>
                 }
               />
@@ -99,14 +80,6 @@ function App() {
                 element={
                   <ProtectedRoute>
                     <List columns={roomColumns} />
-                  </ProtectedRoute>
-                }
-              />
-              <Route
-                path=":productId"
-                element={
-                  <ProtectedRoute>
-                    <Singles />
                   </ProtectedRoute>
                 }
               />

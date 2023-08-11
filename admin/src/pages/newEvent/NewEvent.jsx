@@ -1,48 +1,45 @@
-import "./new.css";
+import "./newEvent.css";
 import Sidebar from "../../components/sidebar/Sidebar";
 import { useState } from "react";
+import { hotelInputs } from "../../formSource";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
-const New = ({ inputs, title }) => {
+const NewEvent = () => {
   const [info, setInfo] = useState({});
   const navigate = useNavigate();
-
   const handleChange = (e) => {
-  setInfo((prev) => ({ ...prev, [e.target.id]: e.target.value }));
+    setInfo((prev) => ({ ...prev, [e.target.id]: e.target.value }));
   };
-
   const handleClick = async (e) => {
     e.preventDefault();
-
     try {
-    await axios.post("https://teamz.onrender.com/api/auth/register", info);
-    navigate('/users');
-    } catch (err) {
-      console.log(err);
-    }
+      await axios.post("https://teamz.onrender.com/api/events", info);
+      navigate('/events')
+    } catch (err) {console.log(err)}
   };
-
-  console.log(info);
   return (
     <div className="new">
       <Sidebar />
       <div className="newContainer">
      
         <div className="top">
-          <h1>{title}</h1>
+          <h1>Add New Event</h1>
         </div>
+        
         <div className="bottom">
+    
           <div className="right">
             <form>
-              {inputs.map((input) => (
+
+              {hotelInputs.map((input) => (
                 <div className="formInput" key={input.id}>
                   <label>{input.label}</label>
                   <input
+                    id={input.id}
                     onChange={handleChange}
                     type={input.type}
                     placeholder={input.placeholder}
-                    id={input.id}
                   />
                 </div>
               ))}
@@ -55,4 +52,4 @@ const New = ({ inputs, title }) => {
   );
 };
 
-export default New;
+export default NewEvent;

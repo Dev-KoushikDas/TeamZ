@@ -16,12 +16,12 @@ const Datatable = ({columns}) => {
   }, [data]);
 
   const handleDelete = async (id) => {
-    try {
-      await axios.delete(`https://teamz.onrender.com/api/${path}/${id}`);
-      setList(list.filter((item) => item._id !== id));
-    } catch (err) {
-      console.log(err)
-    }
+  try {
+  await axios.delete(`https://teamz.onrender.com/api/${path}/${id}`);
+  setList(list.filter((item) => item._id !== id));
+  }catch (err) {
+  console.log(err)
+  }
   };
 
   const actionColumn = [
@@ -32,9 +32,7 @@ const Datatable = ({columns}) => {
       renderCell: (params) => {
         return (
           <div className="cellAction">
-            <Link to="/users/test" style={{ textDecoration: "none" }}>
-              <div className="viewButton">View</div>
-            </Link>
+          
             <div
               className="deleteButton"
               onClick={() =>handleDelete(params.row._id)}>
